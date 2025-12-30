@@ -34,8 +34,8 @@ export default function Sidebar() {
 
 	const links = [
 		{ name: "Dashboard", href: "/", icon: ChartPie },
-		{ name: "Ultrasound", href: "/", icon: Microscope },
-		{ name: "Mammogram", href: "/", icon: Fullscreen },
+		{ name: "Mammogram", href: "/mammogram", icon: Fullscreen },
+		{ name: "Ultrasound", href: "/ultrasound", icon: Microscope },
 
 		{ name: "History", href: "/history", icon: History },
 	];
@@ -56,12 +56,14 @@ export default function Sidebar() {
 					isOpen ? "translate-x-0" : "-translate-x-full"
 				)}>
 				<div className="flex items-center gap-3 mb-12">
-					<div className="w-10 h-10 bg-gradient-to-tr from-pink-500 to-rose-400 rounded-xl flex items-center justify-center shadow-lg shadow-pink-200 dark:shadow-none">
-						<Activity className="text-white w-6 h-6" />
+					<div className="flex items-center gap-3 px-2">
+						<div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+							<Activity className="h-6 w-6" />
+						</div>
+						<span className="text-xl font-bold text-foreground">
+							EarlyVision
+						</span>
 					</div>
-					<h1 className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-rose-500 bg-clip-text text-transparent">
-						MammoDetect
-					</h1>
 				</div>
 
 				<nav className="flex-1 space-y-3">
